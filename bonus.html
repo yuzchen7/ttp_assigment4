@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bonus</title>
+    <link rel="stylesheet" href="index.css">
+    <script>
+        function calculate_volume() {
+            const value = document.getElementById("radius").value;
+            const volume = (4/3) * Math.PI * value * value * value;
+            window.alert("The volume of the spere is " + volume);
+                return;
+        }
+    </script>
+</head>
+<body>
+    <div id="container">
+        <div id="content">
+            <form>
+                <h1 id="information"></h1>
+                Radius : <input id="radius" type="number" onchange="calculate_volume()" /> <br>
+                <input type="submit" value="submit">
+            </form>
+        </div>
+    </div>
+</body>
+</html>
