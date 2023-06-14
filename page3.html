@@ -6,12 +6,31 @@
     <title>Assignment 4 page 3</title>
     <link rel="stylesheet" href="index.css">
     <script>
+
+        function check_email(email_value) {
+            return String(email_value)
+                    .toLocaleLowerCase()
+                    .match("/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/");
+        }
+
         function check_password() {
+            var info_tag = document.getElementById("information");
+            info_tag.innerText = "";
+
+            var email_value = document.getElementById("email").value;
+            var username_value= document.getElementById("username").value;
+
+            if (!check_email(email_value) && username_value == "") {
+                info_tag.innerText = "user's information is incorrect";
+                return;
+            }
+
             if (document.getElementById("password").value !== "12345678") {
                 window.alert("user's password is incorrect");
                 return;
             }
-            document.getElementById("information").innerText = "user's password is correct";
+
+            info_tag.innerText = "user's information is correct";
         }
     </script>
 </head>
