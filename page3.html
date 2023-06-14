@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 4 page 3</title>
+    <style type="text/css" ></style>
+    <script>
+        function check_password() {
+            if (document.getElementById("password").value !== "12345678") {
+                window.alert("user's password is incorrect");
+                return;
+            }
+            document.getElementById("information").innerText = "user's password is correct";
+        }
+    </script>
+</head>
+<body>
+    <div id="container">
+        <div id="content">
+            <form>
+                <h1 id="information"></h1>
+                email : <input id="email" type="text" /> <br>
+                username : <input id="username" type="text" /> <br>
+                password : <input id="password" type="password" onchange="check_password()" /> <br>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

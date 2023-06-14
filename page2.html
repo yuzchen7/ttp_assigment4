@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 4 page 2</title>
+    <style>
+        #square {
+            background-color: aquamarine;
+            width: 200px;
+            height: 200px;
+            color: red;
+        }
+    </style>
+    <script>
+        function display_alert() {
+            window.alert("Hey, I told you not to hover over me!");
+        }
+    </script>
+</head>
+<body>
+    <div id="container">
+        <div id="content">
+            <div id="square" onmouseover="display_alert()">
+                <center>
+                    Don't hover over me
+                </center>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
